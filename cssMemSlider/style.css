@@ -1,0 +1,112 @@
+body {
+  height: 100vh;
+  background-color: #25282A;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 700px;
+  height: 500px;
+  background-color:wheat;
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  grid-template-rows: 6fr 1fr;
+}
+
+.content-img {
+  background-color: rgb(223, 223, 223);
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.content-desc {
+  background-color: rgb(214, 214, 214);
+}
+
+.control {
+  background-color: rgb(233, 233, 233);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.radio-button {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.radio-button input {
+  display: none;
+}
+
+.radio-button label {
+  font-size: 0;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  cursor: pointer;
+  /* background-color: rgb(204, 204, 204); */
+}
+
+.radio-button label::before {
+  content: "";
+  display: inline-block;
+  background-color: #2976e0;
+  border: 2px solid #2976e0;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  position: relative;
+  left: 5px;
+  top: 5px;
+  z-index: 5;
+  transition: 0.2s;
+}
+
+/* .radio-button label:hover {
+  background-color: blue;
+} */
+
+.radio-button label:hover::before {
+  border-color: #fff;
+  background-color: #fff;
+}
+.radio-button input:checked+label:hover::before {
+  background-color: rgba(255, 255, 255, 0);
+}
+/* .radio-button input:active::before {
+  border-color: rgb(121, 121, 121);
+} */
+
+/* ========================================== */
+/* .radio-button input:active+label:hover::before {
+  border-color: rgb(180, 180, 180);
+} */
+/* .radio-button label:hover {
+  background-color: #5898f1;
+} */
+
+/* .radio-button input:checked + label {
+  background-color: green;
+} */
+
+.radio-button input:checked+label::before {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+
+
+
+
+
+
+
+
+
