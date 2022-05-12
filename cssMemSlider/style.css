@@ -7,6 +7,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 h1 {
@@ -19,6 +21,7 @@ h1 {
   display: grid;
   grid-template-columns: 6fr 2fr;
   grid-template-rows: 6fr 1fr;
+  row-gap: 20px;
 }
 
 .content-img {
@@ -94,6 +97,7 @@ label:hover::before {
 /* .radio-button input:active+label:hover::before {
   border-color: rgb(180, 180, 180);
 } */
+
 /* .radio-button label:hover {
   background-color: #5898f1;
 } */
@@ -131,7 +135,6 @@ label:hover::before {
   position: relative;
 }
 .desc {
-  margin-top: 10px;
   font-size: 20px;
   position: absolute;
   top: -50px;
@@ -179,7 +182,14 @@ label:hover::before {
   opacity: 1;
 }
 
-
+#input1:active~.control #label1::before,
+#input2:active~.control #label2::before,
+#input3:active~.control #label3::before,
+#input4:active~.control #label4::before 
+{
+  border-color: rgb(187, 187, 187);
+  background-color: rgb(187, 187, 187);
+}
 
 
 @media (max-width: 768px) {
@@ -197,6 +207,8 @@ label:hover::before {
 
   .content-desc {
     order: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 
   .container {
